@@ -1,0 +1,33 @@
+pragma circom 2.1.4;
+
+template Example () {
+    signal input x1;
+    signal input x2;
+    signal input x3;
+    signal input x4;
+
+    //Intermediate computation signals (i.e. not inputs)
+    signal y1;
+    signal y2;
+
+    signal output out;
+
+    //Calculate intermediate signal values at compile time
+    y1<--x1+x2;
+    y2<--y1*x3;
+    out<--y2-x4;
+
+    //Constraints
+    y1 === x1+x2;
+    y2 === y1*x3;
+    y2 === out+x4;
+}
+
+component main = Example();
+
+/* INPUT = {
+    "x1":"2",
+    "x2":"4",
+    "x3":"8",
+    "x4":"5"
+} */
