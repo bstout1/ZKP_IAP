@@ -1,0 +1,185 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath, amsthm, amssymb, amsfonts, mathrsfs, amscd, fancyheadings}
+\pagestyle{fancy}
+\usepackage[top=1in, left=1in, right=1in]{geometry}% http://ctan.org/pkg/geometry
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+
+\def\AA{{\mathbb A}}
+\def\BB{{\mathbb B}}
+\def\CC{{\mathbb C}}
+\def\FF{{\mathbb F}}
+\def\GG{{\mathbb G}}
+\def\KK{{\mathbb K}}
+\def\MM{{\mathbb M}}
+\def\NN{{\mathbb N}}
+\def\OO{{\mathbb O}}
+\def\QQ{{\mathbb Q}}
+\def\PP{{\mathbb P}}
+\def\QQ{{\mathbb Q}}
+\def\RR{{\mathbb R}}
+\def\TT{{\mathbb T}}
+\def\ZZ{{\mathbb Z}}
+
+\def\Asf{{\mathsf A}}
+\def\Bsf{{\mathsf B}}
+\def\Esf{{\mathsf E}}
+\def\Fsf{{\mathsf F}}
+\def\Psf{{\mathsf P}}
+\def\Ssf{{\mathsf S}}
+
+\def\hhat{{\hat h}}
+\def\Hhat{{\hat H}}
+
+\def\0{{\mathbf 0}}
+\def\1{{\mathbf 1}}
+\def\a{{\mathbf a}}
+\def\b{{\mathbf b}}
+\def\c{{\mathbf c}}
+\def\e{{\mathbf e}}
+\def\h{{\mathbf h}}
+\def\r{{\mathbf r}}
+\def\w{{\mathbf w}}
+\def\x{{\mathbf x}}
+\def\y{{\mathbf y}}
+\def\z{{\mathbf z}}
+\def\Abf{{\mathbf A}}
+\def\Bbf{{\mathbf B}}
+
+\def\Acal{{\mathcal A}}
+\def\Bcal{{\mathcal B}}
+\def\Ccal{{\mathcal C}}
+\def\Dcal{{\mathcal D}}
+\def\Ecal{{\mathcal E}}
+\def\Fcal{{\mathcal F}}
+\def\Gcal{{\mathcal G}}
+\def\Hcal{{\mathcal H}}
+\def\Ical{{\mathcal I}}
+\def\Jcal{{\mathcal J}}
+\def\Kcal{{\mathcal K}}
+\def\Lcal{{\mathcal L}}
+\def\Mcal{{\mathcal M}}
+\def\Ncal{{\mathcal N}}
+\def\Ocal{{\mathcal O}}
+\def\Pcal{{\mathcal P}}
+\def\Qcal{{\mathcal Q}}
+\def\Rcal{{\mathcal R}}
+\def\Scal{{\mathcal S}}
+\def\Tcal{{\mathcal T}}
+\def\Vcal{{\mathcal V}}
+\def\Xcal{{\mathcal X}}
+\def\Zcal{{\mathcal Z}}
+
+\def\pfrak{{\mathfrak p}}
+\def\Gfrak{{\mathfrak G }}
+\def\Rfrak{{\mathfrak R }}
+
+\def\Kbar{{\bar K}}
+\def\kbar{{\bar k}}
+\def\Fbar{{\bar F}}
+
+\def\arch{\mathrm{arch}}
+\def\Aut{\mathrm{Aut}}
+\def\ch{\mathrm{char}}
+\def\Cl{\mathrm{Cl}}
+\def\ker{\mathrm{Ker}}
+\def\Div{\mathrm{Div}}
+\def\diag{\mathrm{diag}}
+\def\Perm{\mathrm{Perm}}
+\def\diam{\mathrm{diam}}
+\def\disc{\mathrm{disc}}
+\def\sgn{\mathrm{sgn}}
+\def\grad{\mathrm{grad}}
+\def\div{\mathrm{div}}
+\def\Isom{\mathrm{Isom}}
+\def\ns{\mathrm{ns}}
+\def\ab{\mathrm{ab}}
+\def\s{\mathrm{s}}
+\def\Gal{\mathrm{Gal}}
+\def\Nor{\mathrm{Nor}}
+\def\Sym{\mathrm{Sym}}
+\def\sym{\mathrm{sym}}
+\def\Rat{\mathrm{Rat}}
+\def\Hom{\mathrm{Hom}}
+\def\Spec{\mathrm{Spec}}
+\def\Vol{\mathrm{Vol}}
+\def\PGL{\mathrm{PGL}}
+\def\GL{\mathrm{GL}}
+\def\tor{\mathrm{tor}}
+\def\Pic{\mathrm{Pic}}
+\def\PrePer{\mathrm{PrePer}}
+\def\Per{\mathrm{Per}}
+\def\Crit{\mathrm{Crit}}
+\def\Fix{\mathrm{Fix}}
+\def\ord{\mathrm{ord}}
+\def\ad{\mathrm{ad}}
+\def\Res{\mathrm{Res}}
+\def\Prep{\mathrm{Prep}}
+\def\trace{\mathrm{trace}}
+\def\norm{\mathrm{norm}}
+\def\Berk{\mathrm{Berk}}
+\def\supp{\mathrm{supp}}
+\def\st{\mathrm{st}}
+\def\im{\mathrm{Im}}
+\def\CS{\mathrm{CS}}
+\def\min{\mathrm{min}}
+
+\def\GLn{\mathrm{GL_n}}
+\def\Frac{\mathrm{Frac}}
+\def\uf{\mathrm{uf}}
+\def\uc{\mathrm{uc}}
+\def\Tw{\mathrm{Twist}}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prb}{Problem}
+\newtheorem{conj}{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem*{thmdfn}{Theorem/Definition}
+\newtheorem*{dfns}{Definitions}
+\newtheorem*{rem}{Remark}
+\newtheorem{ex}{Example}
+
+\begin{document}
+
+\title{ZKP IAP: Session 3 Homework}
+\author{Brian Justin Stout\footnote{email: bjstout@proton.me}}
+\maketitle
+
+\begin{prb}\label{P1}
+Prove the quadratic non-residue interactive protocol is complete and sound.
+\end{prb}
+Suppose $m, x$ are positive integers. Assume that $QR(m,x)=0$, i.e. that x is not a quadratic residue, mod $m$. Assume the prover is honest. Let $s\in\ZZ_m$ and $b$ be arbitrary. If $b=0$, then $y=s^2x$. In this case $y$ is also not a quadratic residue mod $m$ (if it were, then $x$ would be too), so Prover sends back $0$, which matches $b$.
+
+If $b=1$, then Verifier sends $y=s^2$. This is a quadratic residue, so $QR(y,m)=1$ and Prover sends back $1$, matching $b$. The protocol is complete.
+
+To show soundness, Verifier selects $b$ as $0$ or $1$ with probability of $\dfrac{1}{2}$ each. Lets say that Prover responsds with $0$ with probability $p$ and $1$ with probability $1-p$. Then the probability verifier rejects is $\dfrac{1}{2}p+\dfrac{1}{2}(1-p)=\dfrac{1}{2}$. 
+
+\begin{prb}\label{P2}
+Prove the quadratic residue interactive protocol is complete, sound, knowledge sound, and zero knowledge.
+\end{prb}
+
+The proof of soundness and completeness are identical to the previous problem.
+
+To prove knowledge soundness, assume that the Verifier could query both $b=0$ and $b=1$ at the same time. In this case, Verifier receives both $t$ and $st$. He recovers $s=t*t^{-1}$, so Prover does indeed know $s$.
+
+To prove zero knowledge we argue as follows. Half of integers modulo $m$ are quadratic resiudes. Verifier learns the following during his interaction with Prover: $y=xt^2$. Because $t^2$ is a quadratic resiude, the map $y\mapsto yt^2$ is a permutation of the set of resides and non-residues, respectively. Verifier then learns either $(0,t)$ or $(1,st)$ with probabilities of $\dfrac{1}{2}$ and $\dfrac{1}{2}$. So with probability $\dfrac{1}{2}$ Verifier knows $x, m, xt^2, 0, t$ and with probability $\dfrac{1}{2}$ Verifier knows $x, m, xt^2, 1, st$. The distribution of these elements is identical.
+
+\begin{prb}\label{P3}
+Suppose a group G has an efficiently computable nondegenerate bilinear self pairing. Give an efficient algorithm for deciding given $\alpha G, \beta G, H\in\GG$ whether $\alpha\beta G = H$.
+\end{prb}
+Let $e$ be the pairing. Check $e(\alpha G, \beta G) = e(H, G)$
+
+\begin{prb}\label{P4}
+Check the BLS signature scheme accepts a correctly signed signaure. Argue it is computationally infeasible to to find a forged signature of any message $m$ if the forger is given $pk$ but not $sk$. What are come computational hardness assumptions?
+\end{prb}
+
+Assume $\sigma$ is a a correct signature for a message $m$. Then
+$$e(g_0,\sigma)=e(g_0,\alpha H(m))=e(\alpha g_0, H(m))=e(pk,H(m))$$
+This requires the DDH assumption for the pairing and groups. It also requires a secure hash function. For any message $m$ to create a forged signature requires solving the discrete log problem for $\GG_0$, which is assumed hard.
+\end{document}
