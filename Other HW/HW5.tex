@@ -1,0 +1,195 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath, amsthm, amssymb, amsfonts, mathrsfs, amscd, fancyheadings}
+\pagestyle{fancy}
+\usepackage[top=1in, left=1in, right=1in]{geometry}% http://ctan.org/pkg/geometry
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+
+\def\AA{{\mathbb A}}
+\def\BB{{\mathbb B}}
+\def\CC{{\mathbb C}}
+\def\FF{{\mathbb F}}
+\def\GG{{\mathbb G}}
+\def\KK{{\mathbb K}}
+\def\MM{{\mathbb M}}
+\def\NN{{\mathbb N}}
+\def\OO{{\mathbb O}}
+\def\QQ{{\mathbb Q}}
+\def\PP{{\mathbb P}}
+\def\QQ{{\mathbb Q}}
+\def\RR{{\mathbb R}}
+\def\TT{{\mathbb T}}
+\def\ZZ{{\mathbb Z}}
+
+\def\Asf{{\mathsf A}}
+\def\Bsf{{\mathsf B}}
+\def\Esf{{\mathsf E}}
+\def\Fsf{{\mathsf F}}
+\def\Psf{{\mathsf P}}
+\def\Ssf{{\mathsf S}}
+
+\def\hhat{{\hat h}}
+\def\Hhat{{\hat H}}
+
+\def\0{{\mathbf 0}}
+\def\1{{\mathbf 1}}
+\def\a{{\mathbf a}}
+\def\b{{\mathbf b}}
+\def\c{{\mathbf c}}
+\def\e{{\mathbf e}}
+\def\h{{\mathbf h}}
+\def\r{{\mathbf r}}
+\def\w{{\mathbf w}}
+\def\x{{\mathbf x}}
+\def\y{{\mathbf y}}
+\def\z{{\mathbf z}}
+\def\Abf{{\mathbf A}}
+\def\Bbf{{\mathbf B}}
+
+\def\Acal{{\mathcal A}}
+\def\Bcal{{\mathcal B}}
+\def\Ccal{{\mathcal C}}
+\def\Dcal{{\mathcal D}}
+\def\Ecal{{\mathcal E}}
+\def\Fcal{{\mathcal F}}
+\def\Gcal{{\mathcal G}}
+\def\Hcal{{\mathcal H}}
+\def\Ical{{\mathcal I}}
+\def\Jcal{{\mathcal J}}
+\def\Kcal{{\mathcal K}}
+\def\Lcal{{\mathcal L}}
+\def\Mcal{{\mathcal M}}
+\def\Ncal{{\mathcal N}}
+\def\Ocal{{\mathcal O}}
+\def\Pcal{{\mathcal P}}
+\def\Qcal{{\mathcal Q}}
+\def\Rcal{{\mathcal R}}
+\def\Scal{{\mathcal S}}
+\def\Tcal{{\mathcal T}}
+\def\Vcal{{\mathcal V}}
+\def\Xcal{{\mathcal X}}
+\def\Zcal{{\mathcal Z}}
+
+\def\pfrak{{\mathfrak p}}
+\def\Gfrak{{\mathfrak G }}
+\def\Rfrak{{\mathfrak R }}
+
+\def\Kbar{{\bar K}}
+\def\kbar{{\bar k}}
+\def\Fbar{{\bar F}}
+
+\def\arch{\mathrm{arch}}
+\def\Aut{\mathrm{Aut}}
+\def\ch{\mathrm{char}}
+\def\Cl{\mathrm{Cl}}
+\def\ker{\mathrm{Ker}}
+\def\Div{\mathrm{Div}}
+\def\diag{\mathrm{diag}}
+\def\Perm{\mathrm{Perm}}
+\def\diam{\mathrm{diam}}
+\def\disc{\mathrm{disc}}
+\def\sgn{\mathrm{sgn}}
+\def\grad{\mathrm{grad}}
+\def\div{\mathrm{div}}
+\def\Isom{\mathrm{Isom}}
+\def\ns{\mathrm{ns}}
+\def\ab{\mathrm{ab}}
+\def\s{\mathrm{s}}
+\def\Gal{\mathrm{Gal}}
+\def\Nor{\mathrm{Nor}}
+\def\Sym{\mathrm{Sym}}
+\def\sym{\mathrm{sym}}
+\def\Rat{\mathrm{Rat}}
+\def\Hom{\mathrm{Hom}}
+\def\Spec{\mathrm{Spec}}
+\def\Vol{\mathrm{Vol}}
+\def\PGL{\mathrm{PGL}}
+\def\GL{\mathrm{GL}}
+\def\tor{\mathrm{tor}}
+\def\Pic{\mathrm{Pic}}
+\def\PrePer{\mathrm{PrePer}}
+\def\Per{\mathrm{Per}}
+\def\Crit{\mathrm{Crit}}
+\def\Fix{\mathrm{Fix}}
+\def\ord{\mathrm{ord}}
+\def\ad{\mathrm{ad}}
+\def\Res{\mathrm{Res}}
+\def\Prep{\mathrm{Prep}}
+\def\trace{\mathrm{trace}}
+\def\norm{\mathrm{norm}}
+\def\Berk{\mathrm{Berk}}
+\def\supp{\mathrm{supp}}
+\def\st{\mathrm{st}}
+\def\im{\mathrm{Im}}
+\def\CS{\mathrm{CS}}
+\def\min{\mathrm{min}}
+
+\def\GLn{\mathrm{GL_n}}
+\def\Frac{\mathrm{Frac}}
+\def\uf{\mathrm{uf}}
+\def\uc{\mathrm{uc}}
+\def\Tw{\mathrm{Twist}}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prb}{Problem}
+\newtheorem{conj}{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem*{thmdfn}{Theorem/Definition}
+\newtheorem*{dfns}{Definitions}
+\newtheorem*{rem}{Remark}
+\newtheorem{ex}{Example}
+
+\begin{document}
+
+\title{ZKP IAP: Session 5 Homework}
+\author{Brian Justin Stout\footnote{email: bjstout@proton.me}}
+\maketitle
+
+\begin{prb}\label{P1}
+How can use the secret value $\tau$ to make a fake KZG opening proof if you had it?
+\end{prb}
+Suppose verifer sends $y$ and I desire to send $w\neq z=f(y)$ with a proof $\pi=g^n$ that satisfies the pairing.
+
+The verifier will check the pairing formula, where $c_f$ is the commitment to $f$:
+$$e(\frac{c_f}{g^w},g)=e(\pi,\frac{g^\tau}{g^y})$$
+$$=e(f^{f(\tau)-w},g)=e(g^n,g^{\tau-y})$$
+$$=e(g,g)^{f(\tau)-w}=e(g,g)^{n(\tau-y)}$$
+
+Which will hold if we compute $\pi$ using $n=\dfrac{f(\tau)-w}{\tau - y}$, and is computable if we know $\tau$.
+
+
+\begin{prb}\label{P2}
+Construct a vector commitment scheme from the ZKG polynomial commitment scheme.
+\end{prb}
+Suppose our message space was $\mathcal{M}=\FF^n=\{(m_1,...,m_n)| m_i\in\FF\}$. Let $m\in\mathcal{M}$ be a message. Construct the ordered pairs
+
+$$(1,m_1),...,(n,m_n)$$
+
+and let $f_m$ be the degree $n-1$ polynomial over $\FF$ defined by Lagrange interpolation. Finally, define the commitment of $m$ to be the ZKG commitment of $f_m$, which we denote by $c_m$.
+
+The commitment scheme is defined as follows:
+\begin{itemize}
+    \item $Setup(1^\lambda)$ is the same as the ZKG set up, assuming $d>n$. Outputs $SRS=(ck,vk)$
+    \item $Commit(ck,m)$ produces $c_m$ the ZKG commitment to $f_m$.
+    \item $Open(SRS, c_m, i, m_i)$ produces a ZKG proof that $f_m(i)=m_i$.
+\end{itemize}
+
+\begin{prb}\label{P3}
+Can you extend ZKG polynomial commitment scheme to produce a multiproof $\pi$ that convinces us of $p(x_i)=y_i$ for a list of points and evaluations $(x_i,y_i)$?
+\end{prb}
+
+Suppose we had a commitment to a polynomial $p$ and had several challenges $(x_i,y_i)$ for $i=1,...,r$.  Interpolate $I(x)$ using Lagrange interpolation. Then $p(x)-I(x)$ has roots at $x_1,...,x_r$ and therefore $\Pi_i(x-x_i)$ divides this polynomial. Let $q$ be the quotient polynomial. Set the opening proof $\pi=[q(\tau)]_1$.
+
+We claim this opening proof will validate with any $(x_i,y_i)$. The pairing check is:
+
+$$e(\frac{c_p}{g^{y_i}},g)=e(\pi,\frac{g^\tau}{g^{x_i}})$$
+$$=e(g,g)^{p(\tau)-y_i}=e(g,g)^{q(\tau)(\tau-x_i)}$$
+
+which holds since the interpolated polynomial $I(x_i)=y_i$.
+\end{document}
